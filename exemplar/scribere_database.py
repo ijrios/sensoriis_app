@@ -101,9 +101,8 @@ mqttc.on_publish = on_publish
 mqttc.on_subscribe = on_subscribe
 
 
-#url_str = os.environ.get('CLOUDMQTT_URL', 'tcp://broker.emqx.io:1883')                  # pass broker addr e.g. "tcp://iot.eclipse.org"
-#url_str = os.environ.get('CLOUDMQTT_URL', 'tcp://broker.hivemq.com:1883')
-url_str = os.environ.get('CLOUDMQTT_URL', 'tcp://broker.emqx.io:1883') 
+
+url_str = os.environ.get('CLOUDMQTT_URL', 'tcp://currus.udem.io:1883') 
 url = urlparse.urlparse(url_str)
 mqttc.connect(url.hostname, url.port)
 
