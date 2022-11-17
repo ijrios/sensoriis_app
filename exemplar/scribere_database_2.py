@@ -3,7 +3,7 @@ from time import sleep
 import os,sys
 import RPi.GPIO as GPIO
 import paho.mqtt.client as paho
-import urlparse
+from urllib.parse import urlparse
 import datetime
 import boto3
 import threading
@@ -106,7 +106,7 @@ def main():
 
 
     url_str = os.environ.get('CLOUDMQTT_URL', 'tcp://currus.udem.io:1883') 
-    url = urlparse.urlparse(url_str)
+    url = urlparse(url_str)
     mqttc.connect(url.hostname, url.port)
 
     rc = 0

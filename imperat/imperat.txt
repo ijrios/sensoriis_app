@@ -1,0 +1,10 @@
+MQTT broker 
+pip3 install paho-mqtt python-etcd
+git clone https://github.com/eclipse/paho.mqtt.python
+cd paho.mqtt.python
+python setup.py install
+pip install paho-mqtt
+pip install urlparse4
+pip install git+https://github.com/mitsuhiko/flask-oauth
+
+AWS EC2
